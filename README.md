@@ -25,7 +25,7 @@ You can find the demo [here]https://sinework.github.io/weather-app/
 
 - make sure you have have NodeJS and NPM installed in your computer
 - clone the repository from here [repo link](git@github.com:sinework/restaurant-page.git)
-- navigate in your terminal to the folder `weather page`
+- navigate in your terminal to the folder `weather-app`
 - run `npm install`
 - run `npx webpack`
 - open index.html with your browser
