@@ -30,6 +30,56 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 
 /***/ }),
 
+/***/ "./src/assets/clear.jpg":
+/*!******************************!*\
+  !*** ./src/assets/clear.jpg ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"imgs/clear.jpg\");\n\n//# sourceURL=webpack://weather-app/./src/assets/clear.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/cloudy.jpg":
+/*!*******************************!*\
+  !*** ./src/assets/cloudy.jpg ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"imgs/cloudy.jpg\");\n\n//# sourceURL=webpack://weather-app/./src/assets/cloudy.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/rain.jpg":
+/*!*****************************!*\
+  !*** ./src/assets/rain.jpg ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"imgs/rain.jpg\");\n\n//# sourceURL=webpack://weather-app/./src/assets/rain.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/snow.jpg":
+/*!*****************************!*\
+  !*** ./src/assets/snow.jpg ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"imgs/snow.jpg\");\n\n//# sourceURL=webpack://weather-app/./src/assets/snow.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/storm.jpg":
+/*!******************************!*\
+  !*** ./src/assets/storm.jpg ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"imgs/storm.jpg\");\n\n//# sourceURL=webpack://weather-app/./src/assets/storm.jpg?");
+
+/***/ }),
+
 /***/ "./src/style.css":
 /*!***********************!*\
   !*** ./src/style.css ***!
@@ -66,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst populateWeather = (results) => {\n  const deg = document.querySelector('.degree');\n  const desc = document.querySelector('.description');\n  const city = document.querySelector('.location-name');\n  const img = document.querySelector('#icon-img');\n  city.innerHTML = results.name;\n  deg.innerHTML = results.main.temp;\n  desc.innerHTML = results.weather[0].description;\n  img.src = `http://openweathermap.org/img/w/${results.weather[0].icon}.png`;\n};\nconst weatherFetcher = () => {\n  const inputBox = document.querySelector('.search-input');\n  const butn = document.querySelector('.btn');\n\n  butn.addEventListener('click', (e) => {\n    e.preventDefault();\n\n    fetch(\n      `https://api.openweathermap.org/data/2.5/weather?q=${inputBox.value}&units=metric&appid=a8d39b545ee760a37a11bbc7a1698ad6`,\n    )\n      .then((response) => response.json())\n      .then((data) => populateWeather(data))\n      .catch(() => alert('City does not exist!'));\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (weatherFetcher);\n\n\n//# sourceURL=webpack://weather-app/./src/weatherControl.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _assets_clear_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/clear.jpg */ \"./src/assets/clear.jpg\");\n/* harmony import */ var _assets_rain_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/rain.jpg */ \"./src/assets/rain.jpg\");\n/* harmony import */ var _assets_cloudy_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/cloudy.jpg */ \"./src/assets/cloudy.jpg\");\n/* harmony import */ var _assets_snow_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/snow.jpg */ \"./src/assets/snow.jpg\");\n/* harmony import */ var _assets_storm_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/storm.jpg */ \"./src/assets/storm.jpg\");\n\n\n\n\n\n\nconst populateWeather = (results) => {\n  const deg = document.querySelector('.degree');\n  const desc = document.querySelector('.description');\n  const city = document.querySelector('.location-name');\n  const img = document.querySelector('#icon-img');\n  city.innerHTML = results.name;\n  deg.innerHTML = results.main.temp;\n  desc.innerHTML = results.weather[0].description;\n  img.src = `http://openweathermap.org/img/w/${results.weather[0].icon}.png`;\n};\n\nconst backgroundChanger = (results) => {\n  switch (results.weather[0].main) {\n    case 'Clear':\n      document.body.style.backgroundImage = `url(${_assets_clear_jpg__WEBPACK_IMPORTED_MODULE_0__.default})`;\n      break;\n    case 'Clouds':\n      document.body.style.backgroundImage = `url(${_assets_cloudy_jpg__WEBPACK_IMPORTED_MODULE_2__.default})`;\n      break;\n    case 'Rain':\n      document.body.style.backgroundImage = `url(${_assets_rain_jpg__WEBPACK_IMPORTED_MODULE_1__.default})`;\n      break;\n    case 'Drizzle':\n      document.body.style.backgroundImage = `url(${_assets_rain_jpg__WEBPACK_IMPORTED_MODULE_1__.default})`;\n      break;\n    case 'Mist':\n      document.body.style.backgroundImage = `url(${_assets_rain_jpg__WEBPACK_IMPORTED_MODULE_1__.default})`;\n      break;\n    case 'Thunderstorm':\n      document.body.style.backgroundImage = `url(${_assets_storm_jpg__WEBPACK_IMPORTED_MODULE_4__.default})`;\n      break;\n    case 'Snow':\n      document.body.style.backgroundImage = `url(${_assets_snow_jpg__WEBPACK_IMPORTED_MODULE_3__.default})`;\n      break;\n    default:\n      break;\n  }\n};\nconst weatherFetcher = () => {\n  const inputBox = document.querySelector('.search-input');\n  const butn = document.querySelector('.btn');\n\n  butn.addEventListener('click', (e) => {\n    e.preventDefault();\n\n    fetch(\n      `https://api.openweathermap.org/data/2.5/weather?q=${inputBox.value}&units=metric&appid=a8d39b545ee760a37a11bbc7a1698ad6`,\n    )\n      .then((response) => response.json())\n      .then((data) => {\n        populateWeather(data);\n        backgroundChanger(data);\n      })\n      .catch(() => alert('City does not exist!'));\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (weatherFetcher);\n\n\n//# sourceURL=webpack://weather-app/./src/weatherControl.js?");
 
 /***/ })
 
@@ -120,6 +170,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -134,6 +196,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
